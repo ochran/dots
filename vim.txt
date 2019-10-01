@@ -1,0 +1,97 @@
+Navigation:
+	h=left
+	j=down
+	k=up
+	l=right
+	
+	w=first char of next word (ctrl right)
+	e=last char of current word
+	b=first char of previous word (ctrl left)
+	
+	0=first char of line
+	^=first non-blank char of line
+	$=last char of line
+	
+	gg=first char of file
+	G=last line of file
+	12G=line 12 of file
+
+Insert Options:
+	o=insert mode under current line
+	O=insert mode above current line
+	i insert mode before cursor
+	I=insert mode before first non-blank in line
+	a=insert mode after cursor
+	A=insert mode after last char in line
+	s=delete char and enter insert mode
+	S=delete line and enter insert mode
+	r=replace char
+	C=delete rest of line and enter insert mode
+	cw=delete to end of current word and enter insert mode
+
+Undo/redo:
+	u=undo
+	C-r=redo
+
+Indent:
+	>=indent selection
+	<=unindent selection
+
+Tabs:
+	:tabnew=new tab
+	gt=next tab
+	gT=previous tab
+	4gt=switch to tab 4
+
+Find:
+	*=go to next occurence of cursor
+	/=start find next
+	?=start find previous
+	n=next occurence of find
+	N=previous occurence of find
+	:%s/current/new=replace current with new in file
+	:s/current/new=replace current with new in selection
+
+Copy and paste:
+	yy=yank (copy)
+	Y=yank line or selection
+	p=paste after cursor
+	P=paste before cursor
+
+Surrounds:
+	di"=delete all inside quotes, can use any surround char
+	ci"=same as above, but also switches to insert
+
+Cursor Position:
+	z.=centre screen on cursor
+	zt=cursor on top
+	zb=cursor on bottom
+
+
+CtrlP (extension):
+	C-p=open file search menu
+	C-k=up in list
+	C-j=down in list
+	Enter=open file in current tab
+	C-t=open file in new tab
+	
+Nerd Commenter (extension):
+	\cc=comment selection
+	\cu=uncomment selection
+
+Ag (apt-get install silversearcher-ag) (extension):
+	:tabnew=open new tab - better to for searching
+	:Ag "search term"=search current directory for term
+	:Ag! "search term"=same as above, but don't autoload first result
+	Enter or o=open selected file
+	t=open in new tab
+	T=open in new tab but don't switch
+	q=close result window
+	C-w-j=focus bottom buffer (use to get back to result menu)
+
+:%!jq .=format file as json
+
+~=change case of selection
+
+.=repeat previous action
+
