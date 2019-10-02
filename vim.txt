@@ -16,6 +16,18 @@ Navigation:
 	G=last line of file
 	12G=line 12 of file
 
+	C-d  move half-page down
+	C-u  move half-page up
+	C-b  page up
+	C-f  page down
+	C-o  jump to last (older) cursor position
+	C-I  jump to next cursor position (after Ctrl-O)
+	g;=jump to last edit
+
+Marks:
+	ma=marks line (can use any letter 'a' example)
+	'a=jump back
+
 Insert Options:
 	o=insert mode under current line
 	O=insert mode above current line
@@ -63,7 +75,7 @@ Surrounds:
 	ci"=same as above, but also switches to insert
 
 Cursor Position:
-	z.=centre screen on cursor
+	zz=centre screen on cursor
 	zt=cursor on top
 	zb=cursor on bottom
 
@@ -88,6 +100,13 @@ Ag (apt-get install silversearcher-ag) (extension):
 	T=open in new tab but don't switch
 	q=close result window
 	C-w-j=focus bottom buffer (use to get back to result menu)
+
+Nerd Tree (extension):
+	\tt=toggle tree
+	\tr=open tree relative to current file
+	t=open selected file in new tab
+	Enter=open selected file in current tab or expand dir
+	q=close tree view when focused (toggle is easier)
 
 :%!jq .=format file as json
 
