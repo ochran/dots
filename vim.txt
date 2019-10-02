@@ -107,6 +107,7 @@ Nerd Tree (extension):
 	t=open selected file in new tab
 	Enter=open selected file in current tab or expand dir
 	q=close tree view when focused (toggle is easier)
+	I=toggle view hidden files
 
 :%!jq .=format file as json
 
