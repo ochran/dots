@@ -44,6 +44,13 @@ map <C-x> <ESC>:q<CR>
 map <C-s> <ESC>:w<CR>
 imap <C-s> <ESC>:w<CR>
 
+"Find current word in project
+map <F6> :Ag <cword><CR>
+
+"Gitgutter refresh all signs
+"use after commits 
+map <F7> :GitGutterAll<CR>
+
 "insearch bindings
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
