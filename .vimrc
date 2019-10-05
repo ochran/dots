@@ -26,6 +26,7 @@ highlight ColorColumn ctermbg=238
 
 "Line number
 set number
+set relativenumber
 
 "Line and column no. in bottom right
 set ruler
