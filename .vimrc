@@ -63,6 +63,10 @@ endfunction
 map <Leader>tt <ESC>:NERDTreeToggle<CR>
 map <Leader>tr <ESC>:call ToggleNERDTreeFind()<CR>
 
+"Reorder tabs
+noremap <Leader><Left>  :tabmove -1<CR>
+noremap <Leader><Right> :tabmove +1<CR>
+
 "Save and close bindings
 map <C-x> <ESC>:q<CR>
 map <C-s> <ESC>:w<CR>
