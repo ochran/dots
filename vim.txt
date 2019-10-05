@@ -3,6 +3,11 @@ Navigation:
 	j=down
 	k=up
 	l=right
+	(above can be used after a number: 25j=down 25)
+	
+	H=top of screen (high)
+	M=middle of screen (middle)
+	L=bottom of screen (low)
 	
 	w=first char of next word (ctrl right)
 	e=last char of current word
@@ -28,6 +33,20 @@ Marks:
 	ma=marks line (can use any letter 'a' example)
 	'a=jump back
 
+Delete/Change:
+	d=delete
+	dfr=delete to and first "r"
+	dtr=delete to first r
+	D=delete rest of line
+	dw=delete to end of current word
+	db=delete to start of current word
+	(substitute "d" for "c" and the same action will be performed, but also switch to insert)
+	
+	s=delete char and enter insert mode
+	S=delete line and enter insert mode
+	
+	r=replace char
+
 Insert Options:
 	o=insert mode under current line
 	O=insert mode above current line
@@ -35,11 +54,6 @@ Insert Options:
 	I=insert mode before first non-blank in line
 	a=insert mode after cursor
 	A=insert mode after last char in line
-	s=delete char and enter insert mode
-	S=delete line and enter insert mode
-	r=replace char
-	C=delete rest of line and enter insert mode
-	cw=delete to end of current word and enter insert mode
 
 Undo/redo:
 	u=undo
@@ -69,6 +83,7 @@ Copy and paste:
 	Y=yank line or selection
 	p=paste after cursor
 	P=paste before cursor
+	yyp=can be used as duplicate line
 
 Surrounds:
 	di"=delete all inside quotes, can use any surround char
@@ -79,19 +94,34 @@ Cursor Position:
 	zt=cursor on top
 	zb=cursor on bottom
 
+********************MISC********************
+:%!jq .=format file as json
 
-CtrlP (extension):
+~=change case of selection
+
+.=repeat previous action
+
+********************EXTENSIONS********************
+$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+   
+Add extensions to .vimrc, then open vim and run :PlugInstall
+
+GitGutter:
+	F7=refresh all tabs' git signs (useful after commits)
+	
+CtrlP:
 	C-p=open file search menu
 	C-k=up in list
 	C-j=down in list
 	Enter=open file in current tab
 	C-t=open file in new tab
 	
-Nerd Commenter (extension):
+Nerd Commenter:
 	\cc=comment selection
 	\cu=uncomment selection
 
-Ag (apt-get install silversearcher-ag) (extension):
+Ag (apt-get install silversearcher-ag):
 	:tabnew=open new tab - better to for searching
 	:Ag "search term"=search current directory for term
 	:Ag! "search term"=same as above, but don't autoload first result
@@ -100,18 +130,12 @@ Ag (apt-get install silversearcher-ag) (extension):
 	T=open in new tab but don't switch
 	q=close result window
 	C-w-j=focus bottom buffer (use to get back to result menu)
+	F6=Find current word in project
 
-Nerd Tree (extension):
+Nerd Tree:
 	\tt=toggle tree
 	\tr=open tree relative to current file
 	t=open selected file in new tab
 	Enter=open selected file in current tab or expand dir
 	q=close tree view when focused (toggle is easier)
 	I=toggle view hidden files
-
-:%!jq .=format file as json
-
-~=change case of selection
-
-.=repeat previous action
-
