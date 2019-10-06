@@ -68,6 +68,7 @@ Tabs:
 	gt=next tab
 	gT=previous tab
 	4gt=switch to tab 4
+	:tabmove 0=move tab to first slot (any number; 0idx)
 
 Find:
 	*=go to next occurence of cursor
@@ -93,6 +94,11 @@ Cursor Position:
 	zz=centre screen on cursor
 	zt=cursor on top
 	zb=cursor on bottom
+
+Explorer Mode:
+	:Ex=enter explorer mode
+	d=create dir
+	%=create file
 
 ********************MISC********************
 :%!jq .=format file as json
@@ -139,3 +145,7 @@ Nerd Tree:
 	Enter=open selected file in current tab or expand dir
 	q=close tree view when focused (toggle is easier)
 	I=toggle view hidden files
+	
+	m=file system menu
+	In File System:
+		a=add child node - dirs end with /
