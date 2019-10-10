@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/plugged')
-
 Plug 'scrooloose/nerdcommenter'
 Plug 'rhysd/vim-crystal'
 Plug 'haya14busa/incsearch.vim'
@@ -7,7 +6,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'brookhong/ag.vim'
 Plug 'scrooloose/nerdtree'
-
+Plug 'mkitt/tabline.vim'
 call plug#end()
 
 "gitgutter update time
@@ -26,7 +25,7 @@ highlight ColorColumn ctermbg=238
 
 "Line number
 set number
-set relativenumber
+"set relativenumber
 
 "Line and column no. in bottom right
 set ruler
@@ -72,11 +71,20 @@ map <C-x> <ESC>:q<CR>
 map <C-s> <ESC>:w<CR>
 imap <C-s> <ESC>:w<CR>
 
-"Find current word in project
-map <F6> <ESC>:Ag <cword><CR>
+"Open new tab ready for Ag search
+map <F4> <ESC>:tabnew<CR><ESC>:Ag -F "
 
-"Gitgutter refresh all signs
-"use after commits 
+"Find current word in project - open new tab beforehand
+function! SearchProject()
+  let var = expand('<cword>')
+  execute ':tabnew'
+  execute ':Ag -F "' . var . '"'
+endfunction
+
+"map <F6> <ESC>:Ag <cword><CR>
+map <F6> <ESC>:call SearchProject()<CR>
+
+"Gitgutter refresh all signs - use after commits 
 map <F7> <ESC>:GitGutterAll<CR>
 
 "Reload .vimrc
