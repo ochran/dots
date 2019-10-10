@@ -148,6 +148,7 @@ Nerd Tree:
 	Enter=open selected file in current tab or expand dir
 	q=close tree view when focused (toggle is easier)
 	I=toggle view hidden files
+	r=reload currently selected node
 	
 	m=file system menu
 	In File System:
