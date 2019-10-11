@@ -80,6 +80,7 @@ Find:
 	:s/current/new=replace current with new in selection
 
 Copy and paste:
+	$ apt install vim-gui-common (yank goes to clipboard)
 	yy=yank (copy)
 	Y=yank line or selection
 	p=paste after cursor
