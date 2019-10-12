@@ -18,6 +18,7 @@ set title
 syntax enable
 set noswapfile
 set nowrap
+set clipboard=unnamedplus
 
 "line length limit line
 set colorcolumn=85
