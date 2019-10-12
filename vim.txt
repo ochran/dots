@@ -126,6 +126,7 @@ CtrlP:
 	C-j=down in list
 	Enter=open file in current tab
 	C-t=open file in new tab
+	<F5>=refresh directory cache
 	
 Nerd Commenter:
 	\cc=comment selection
