@@ -13,10 +13,14 @@ filetype plugin indent on
 highlight ColorColumn ctermbg=233
 set colorcolumn=85
 
-"colour scheme
 colo simpleblack
+
+"tell vim what colour b/g is
 set bg=dark
+"line number colour
 highlight LineNr ctermfg=237
+"selected tab colour
+hi TabLineSel ctermfg=80
 
 "Line number
 set number
