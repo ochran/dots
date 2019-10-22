@@ -1,3 +1,15 @@
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdcommenter'
+Plug 'rhysd/vim-crystal'
+Plug 'haya14busa/incsearch.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'brookhong/ag.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'mkitt/tabline.vim'
+Plug 'lucasprag/simpleblack'
+call plug#end()
+
 "-------------------------------------------Core--------------------------------
 "show file path in window's title
 set title
@@ -18,7 +30,9 @@ colo simpleblack
 "tell vim what colour b/g is
 set bg=dark
 "line number colour
-highlight LineNr ctermfg=237
+highlight LineNr ctermfg=238
+"inactive tab colour
+hi TabLine ctermfg=245
 "selected tab colour
 hi TabLineSel ctermfg=80
 
@@ -64,18 +78,6 @@ imap <C-s> <ESC>:w<CR>
 "Reload .vimrc
 map <F8> <ESC>:so $MYVIMRC<CR>
 "-------------------------------------Extensions---------------------------------
-call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdcommenter'
-Plug 'rhysd/vim-crystal'
-Plug 'haya14busa/incsearch.vim'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'brookhong/ag.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'mkitt/tabline.vim'
-Plug 'lucasprag/simpleblack'
-call plug#end()
-
 "gitgutter update time
 set updatetime=100
 
