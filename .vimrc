@@ -107,7 +107,7 @@ map <F4> <ESC>:tabnew<CR><ESC>:Ag -Fi "
 function! SearchProject()
   let var = expand('<cword>')
   execute ':tabnew'
-  execute ':Ag -Fi "' . var . '"'
+  execute ':Ag -F "' . var . '"'
 endfunction
 
 "map <F6> <ESC>:Ag <cword><CR>
